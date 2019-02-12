@@ -1,0 +1,26 @@
+{
+  "name": "jekyll-serif-theme",
+  "version": "1.0.0",
+  "description": "Serif is a beautiful small business theme for Jekyll. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated.",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "bootstrap": "^4.2.1"
+  },
+  "devDependencies": {
+    "fullpage.js": "^3.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JugglerX/jekyll-serif-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JugglerX/jekyll-serif-theme/issues"
+  },
+  "homepage": "https://github.com/JugglerX/jekyll-serif-theme#readme"
+}

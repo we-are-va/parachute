@@ -8,14 +8,26 @@
   <link href="{{site.baseurl}}/assets/css/style.css" rel="stylesheet">
 </head>
 <body class='page {{page.bodyClass}}'>
+  {% include google-analytics.html %}
   {% include main-menu-mobile.html %}
   <div id="wrapper" class="wrapper">
-    {% include header.html headerClass='header-extra' %}
+    {% include header.html headerClass='theme-light header-fixed' %}
     {{content}}
   </div>
   {% include footer.html %}
   {% include sub-footer.html %}
+  <!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Fullpage -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" integrity="sha256-r2glH03VUY1R1G+7PwWdfL/NaTKpbInwaZFGiohbo4A=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/scrolloverflow.min.js" integrity="sha256-KWJuVGhEknCa0iqavddvszp/1NoYBU01t4qAr1nUdFE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js" integrity="sha256-r80qU2FgO31x7HtK2BQxYOQxPb45x+eKKhzA0OrepyM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.extensions.min.js" integrity="sha256-h15L/g+XIMkwrCo+p9PYghNB2eKEYnjfa1GGxRqLUiY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/jquery.easings.min.js" integrity="sha256-Iam+xj4QRHVyLhixom68hepcdlkJfmtRg/jV8rqXf0Y=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/assets/js/scripts.js"></script>
-  {% include google-analytics.html %}
 </body>
 </html>

@@ -1,7 +1,7 @@
 baseurl: ''
 exclude: ['README.md']
 permalink: pretty
-title: 'Jekyll Serif'
+title: 'Parachute'
 
 collections:
   services:
@@ -26,6 +26,8 @@ defaults:
       image: true
 
 sass:
-  style: compact # possible values: nested expanded compact compressed
+  style: compressed # possible values: nested expanded compact compressed
 
 google_analytics_id: null
+
+MANDRILL_APIKEY: 99

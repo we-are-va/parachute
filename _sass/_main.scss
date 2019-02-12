@@ -1,0 +1,132 @@
+
+
+// Type Styling for body content
+.content, .body-content {
+  a:not(.btn) {
+    position: relative;
+    color: $secondary-color;
+    &:after {
+      content: "";
+      position: absolute;
+      left:0;
+      right: 0;
+      bottom:0rem;
+      width: 100%;
+      border-top: 2px solid $gray-300;//t lighten($default-color, 25%);
+    }
+    &:hover, &:focus {
+      text-decoration: none !important;
+      &:after {
+        border-top-color: $secondary-color;
+      } 
+    }
+  }
+
+  hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    margin-bottom: 2.5rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    list-style: none;
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+  ul:not(.list-unstyled) li:not(.gfield) {
+    &:before {
+      line-height: 1.5rem;
+      content: "•"; 
+      color: $primary-color;
+      font-size: 1.2rem;
+      vertical-align: top;
+      display: inline-block; 
+      width: 1rem;
+      margin-left: -1rem;
+    }
+    ul {
+      margin: 0.25rem 0 0 1rem;
+      li {
+        margin-bottom: 0.45rem;
+      }
+      li:before { 
+        //color: $default-color; 
+        content:"-"; 
+      }
+    }
+  }
+
+  h2 + h3, h2 + h4 {
+    margin-top: 2rem;
+  }
+  p + h2 {
+    margin-top: 3rem;
+  }
+
+  p + h3, p + h4 {
+    margin-top: 2rem;
+  }
+
+}
+
+
+.feature {
+  .feature-image {
+    svg, img {
+      //width: 100%;
+      //height: auto;
+    }
+  }
+  .feature-title {
+    color: $blue-darkest;
+  }
+}
+// .feature {
+//   height: 100%;
+//   border: 2px solid #eaeaea;
+//   padding: 20px;
+//   background-color: #ffffff;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   text-align: center;
+//   .feature-image {
+//     flex: 0 0 auto;
+//     width: 80px;
+//     height: 80px;
+//     display: flex;
+//     margin-bottom: 20px;
+//     text-align: center;
+//   }
+//   svg, img {
+//     width: 100%;
+//     height: auto;
+//   }
+//   .feature-title {
+//     font-size: 1.5rem;
+//     font-weight: 300;
+//     line-height: 1.2;
+//   }
+//   .feature-content {
+//     margin-bottom: 0;
+//     margin-top: auto;
+//     p {
+//       margin: 0;
+//       strong {
+//         color: $secondary;
+//         text-transform: uppercase;
+//         font-size: 0.8rem;
+//         font-weight: 700;
+//       }
+//       em {
+//         color: $primary;
+//         font-style: normal;
+//       }
+//     }
+//   }
+// }

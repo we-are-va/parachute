@@ -4,10 +4,10 @@ layout: default
 bodyClass: page-services-list
 ---
 
-<div class="intro">
+<section class="text-white fp-noscroll layout-intro pt-3">
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-12 intro-text pb-2">
         <h1>Services that grow with your business</h1>
         <p>
           Our business helps hundreds of customers with their accounting and
@@ -16,9 +16,9 @@ bodyClass: page-services-list
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="container pb-6">
+<div class="container pb-6 main">
   <div class="row">
     {% for service in site.services %}
     <div class="col-12 col-md-4 mb-1">
