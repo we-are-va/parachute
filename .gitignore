@@ -3,6 +3,7 @@ node_modules
 npm-debug.log
 
 # Jekyll
+_site
 .jekyll-metadata
 .sass-cache
 
