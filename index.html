@@ -1,25 +1,62 @@
----
-title: Parachute - Soft landings for hard times
-layout: default
-bodyClass: page-home
-intro: This is my intro
-undefined: ''
-
----
-<div id="fullpage">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Parachute - Soft landings for hard times</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/images/favicon.png">
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+<body class='page page-home'>
+  
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    <li><a href="/" class="current">Home</a></li>
+    <li><a href="/services/" class="">Services</a></li>
+    <li><a href="/team/" class="">Team</a></li>
+    <li><a href="/testimonials/" class="">Testimonials</a></li>
+    <li><a href="/contact/" class="">Contact</a></li>
+  </ul>
+</div>
+  <div id="wrapper" class="wrapper">
+    <div id="header" class='header theme-light header-fixed'>
+  <div class="d-flex py-1 align-items-center justify-content-between container">
+    <div class="logo">
+      <a href="/"><img class="svg" alt="Parachute" src="/assets/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img class="svg"  alt="Parachute" src="/assets/images/logo-mobile.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    <li><a href="/" class="position-relative d-block current">Home</a></li>
+    <li><a href="/services/" class="position-relative d-block ">Services</a></li>
+    <li><a href="/team/" class="position-relative d-block ">Team</a></li>
+    <li><a href="/testimonials/" class="position-relative d-block ">Testimonials</a></li>
+    <li><a href="/contact/" class="position-relative d-block ">Contact</a></li>
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+    <div id="fullpage">
   <section id="hp-section-1" class="bg-dark text-white fp-noscroll layout-hero pt-3">
-    <img class="teardrop svg" src="{{site.baseurl}}/assets/images/top-strip-2.svg">
+    <img class="teardrop svg" src="/assets/images/top-strip-2.svg">
     <div class="container">
       <div class="row d-flex flex-column">
         <div class="col-12 col-md-6 text-center">
           <div class="logo-hero">
-            <img class="svg parachute" alt="" src="{{site.baseurl}}/assets/images/logo-parachute-only.svg" />
-            <img class="svg logo-word" alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo-white.svg" />
+            <img class="svg parachute" alt="" src="/assets/images/logo-parachute-only.svg" />
+            <img class="svg logo-word" alt="Parachute" src="/assets/images/logo-white.svg" />
           </div>
         </div>
         <div class='intro-text col-12 col-md-6'> 
           <h2 class='h1'>We got you.</h2>
-          {{ page.intro }}
+          This is my intro
           <p>Is your business in trouble? Parachutes is here to help.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id fermentum ipsum. Sed elementum efficitur ultricies. Ut vestibulum aliquet ligula, et elementum dolor gravida at.</p>
         </div>
@@ -33,20 +70,81 @@ undefined: ''
         <div class="col-12">
           <h2 class="our-purpose-title mb-2">Our sole purpose is to help our clients.</h2>
         </div>
-        {% for service in site.services %}
+        
         <div class="col-12 col-md-4 mb-1">
           <div class="service service-summary">
             <div class="service-content">
               <h2 class="service-title">
-                <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
+                <a href="/services/accounting/">Accounting</a>
               </h2>
-              {{ service.content | markdownify | strip_html | truncate: 100 }}
+              Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum
+de obside ut laniavi...
             </div>
           </div>
         </div>
-        {% endfor %}
+        
+        <div class="col-12 col-md-4 mb-1">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="/services/business-advisory/">Business Advisory</a>
+              </h2>
+              Lorem markdownum, dictis umbrosum dextrum, Lelegeia quamquam distantes pares
+ignisque quaerit ded...
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4 mb-1">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="/services/business-sales/">Business Sales</a>
+              </h2>
+              Cyanee nec pedicis positi. Esse et diem forte quoque et ieiunia
+vixque dixit negari ullis stamina...
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4 mb-1">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="/services/mergers/">Mergers</a>
+              </h2>
+              Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum
+de obside ut laniavi...
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4 mb-1">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="/services/superannuation/">Superannuation</a>
+              </h2>
+              Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum
+de obside ut laniavi...
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-4 mb-1">
+          <div class="service service-summary">
+            <div class="service-content">
+              <h2 class="service-title">
+                <a href="/services/tax-preparation/">Tax Preparation</a>
+              </h2>
+              Lorem markdownum Achaica revolutaque amore, penitus puppes nec furit,
+clipeus fatetur, mira inter...
+            </div>
+          </div>
+        </div>
+        
         <div class="col-12 text-center">
-          <a class="btn btn-light mt-2" href="{{site.baseurl}}/services">View All Services</a>
+          <a class="btn btn-light mt-2" href="/services">View All Services</a>
         </div>
       </div>
     </div>
@@ -58,16 +156,58 @@ undefined: ''
         <div class="col-12">
           <h2 class="text-uppercase h1 title text-center mb-4">Our Features</h2>
         </div>
-        {% for feature in site.data.features %}
+        
         <div class="col-12 col-md-6 col-lg-4 mb-2">
           <div class="feature">
-            {% if feature.image %}<div class="mb-1 feature-image"><img class="" alt="{{ feature.title }} logo" src="{{ feature.image }}" /></div> {% endif %}
-            <h3 class="feature-title">{{ feature.title }}</h3>
-            <div class="feature-content">{{ feature.description }}</div>
+            <div class="mb-1 feature-image"><img class="" alt="Free Consultation logo" src="images/features/noun_branding_1885335.svg" /></div> 
+            <h3 class="feature-title">Free Consultation</h3>
+            <div class="feature-content">New clients recieve an obligation free consultation.</div>
           </div>
         </div>
-        {% endfor %}
+        
+        <div class="col-12 col-md-6 col-lg-4 mb-2">
+          <div class="feature">
+            <div class="mb-1 feature-image"><img class="" alt="Certified Accountants logo" src="images/features/noun_The Process_1885341.svg" /></div> 
+            <h3 class="feature-title">Certified Accountants</h3>
+            <div class="feature-content">All members of our team are certified accountants.</div>
+          </div>
+        </div>
+        
+        <div class="col-12 col-md-6 col-lg-4 mb-2">
+          <div class="feature">
+            <div class="mb-1 feature-image"><img class="" alt="Tax Compliance logo" src="images/features/noun_3d modeling_1885342.svg" /></div> 
+            <h3 class="feature-title">Tax Compliance</h3>
+            <div class="feature-content">We stay up to date on the latest changes to the tax code.</div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
 </div>
+  </div>
+  <footer class="layout-footer layout"></footer>
+
+  <section class="bg-dark text-light layout-subfooter layout">
+  <div class="container py-1">
+    <div class="font-size-sm row text-center sub-footer">
+      <div class="col-sm-12"><p class="mb-0 copyright">© Parachute 2019 All Rights Reserved - <a href="/terms-conditions">Terms &amp; Conditions</a> - <a href="/privacy-policy">Privacy Policy</a> </p></div>
+      <div class="col-sm-12"><p class="mb-0 va">Liability Limited by a scheme approved under professional standards legislation | Website by <a href="http://www.weareva.com.au" target="_blank">VA</a></p></div>
+    </div>
+  </div>
+</section>
+  <!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Fullpage -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" integrity="sha256-r2glH03VUY1R1G+7PwWdfL/NaTKpbInwaZFGiohbo4A=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/scrolloverflow.min.js" integrity="sha256-KWJuVGhEknCa0iqavddvszp/1NoYBU01t4qAr1nUdFE=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js" integrity="sha256-r80qU2FgO31x7HtK2BQxYOQxPb45x+eKKhzA0OrepyM=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.extensions.min.js" integrity="sha256-h15L/g+XIMkwrCo+p9PYghNB2eKEYnjfa1GGxRqLUiY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/vendors/jquery.easings.min.js" integrity="sha256-Iam+xj4QRHVyLhixom68hepcdlkJfmtRg/jV8rqXf0Y=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/assets/js/scripts.js"></script>
+</body>
+</html>
