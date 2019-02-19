@@ -1,7 +1,7 @@
 {
-  "name": "jekyll-serif-theme",
+  "name": "parachute",
   "version": "1.0.0",
-  "description": "Serif is a beautiful small business theme for Jekyll. It contains content types for the archetypical small business website. The theme is fully responsive, blazing fast and artfully illustrated.",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "gulp": "^4.0.0",
@@ -13,14 +13,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JugglerX/jekyll-serif-theme.git"
-  },
-  "author": "",
+  "author": "Skye Johnson",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JugglerX/jekyll-serif-theme/issues"
-  },
-  "homepage": "https://github.com/JugglerX/jekyll-serif-theme#readme"
 }

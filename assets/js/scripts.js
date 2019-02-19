@@ -1,19 +1,27 @@
 $(function() {
-  console.log( "ready!" );
   
   var $hero_footer = $('.layout-hero .hero-footer');
   var $navbar = $("#header");
 
+  load_resize();
+
+  alert("WHAT");
+
   function load_resize() {
-    console.log("HEY");
-    var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight() + 30;
-    console.log(hero_content_height);
+    console.log("on Load/Resize");
+    var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight();
     $('#hero-content, #hero-carousel').css('height', hero_content_height);
+
+    $('.layout-image').css('min-height', ($(window).width()/2));
   }
 
-  load_resize();
-  $(window).resize(function() { load_resize(); }); // onresize
-  // $(window).load(function(){ load_resize(); }); // onload     
+  $(window).load(function(){ 
+    load_resize(); 
+  }); // onload     
+  
+  $(window).resize(function() { 
+    load_resize(); 
+  }); // onresize
 
   // Scrolling Sticky Header Functions
   $(window).scroll(function() {

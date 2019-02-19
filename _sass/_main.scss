@@ -1,13 +1,9 @@
 // INTRO
 .layout-hero {
-  background-color: darken($primary-color, 15%);
-  height: 100vh;
   position: relative;
-
   p {
     margin-bottom: 0;
   }
-
   .hero-content {
     background-color: rgba($primary-color, 0.7);
     height: 100%;    
@@ -69,12 +65,79 @@
     font-size: 1.8rem;
     line-height: 1.3;
   }
+}
+
+// GENERAL CONTENT
+.layout-image {
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  h2 {
+    color: $secondary-color;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p strong {
+    font-weight: 600;
+  }
 
 }
 
+// WHY PARACHUTE
+#whyparachute {
+  background-image: url(../images/square-restaurateur.jpg);
+}
+
+// WE'RE WITH YOU
+#wearewithyou {
+  p {
+    line-height: 1.3;
+  }
+}
+
+#howwehelp {
+  p {
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+  .howwehelp-action {
+    .inner {
+      border: 2px solid rgba(mix($aqua, $white, 50%), 0.2);
+    }
+  }
+}
+
+//OUR PROMISE 
+#ourpromise {
+  background-image: url(../images/square-office-chat.jpg);
+}
+
+// Testimonials
+#testimonials {
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    text-indent: -999px;
+    background-color: $primary-color;
+    opacity: .3;
+    border-radius: 50%;
+    &.active {
+      opacity: .5;
+    }
+  }
+}
 
 // Type Styling for body content
-.content, .body-content {
+.body-content {
   a:not(.btn) {
     position: relative;
     color: $secondary-color;
@@ -95,54 +158,57 @@
     }
   }
 
-  hr {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-  }
 
-  ul {
-    margin-bottom: 2.5rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
+
+
+  // hr {
+  //   margin-top: 3rem;
+  //   margin-bottom: 3rem;
+  // }
+
+  // ul {
+  //   margin-bottom: 2.5rem;
+  //   &:last-child {
+  //     margin-bottom: 0;
+  //   }
     
-    list-style: none;
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
-  ul:not(.list-unstyled) li:not(.gfield) {
-    &:before {
-      line-height: 1.5rem;
-      content: "•"; 
-      color: $primary-color;
-      font-size: 1.2rem;
-      vertical-align: top;
-      display: inline-block; 
-      width: 1rem;
-      margin-left: -1rem;
-    }
-    ul {
-      margin: 0.25rem 0 0 1rem;
-      li {
-        margin-bottom: 0.45rem;
-      }
-      li:before { 
-        //color: $default-color; 
-        content:"-"; 
-      }
-    }
-  }
+  //   list-style: none;
+  //   li {
+  //     margin-bottom: 0.5rem;
+  //   }
+  // }
+  // ul:not(.list-unstyled) li:not(.gfield) {
+  //   &:before {
+  //     line-height: 1.5rem;
+  //     content: "•"; 
+  //     color: $primary-color;
+  //     font-size: 1.2rem;
+  //     vertical-align: top;
+  //     display: inline-block; 
+  //     width: 1rem;
+  //     margin-left: -1rem;
+  //   }
+  //   ul {
+  //     margin: 0.25rem 0 0 1rem;
+  //     li {
+  //       margin-bottom: 0.45rem;
+  //     }
+  //     li:before { 
+  //       //color: $default-color; 
+  //       content:"-"; 
+  //     }
+  //   }
+  // }
 
-  h2 + h3, h2 + h4 {
-    margin-top: 2rem;
-  }
-  p + h2 {
-    margin-top: 3rem;
-  }
+  // h2 + h3, h2 + h4 {
+  //   margin-top: 2rem;
+  // }
+  // p + h2 {
+  //   margin-top: 3rem;
+  // }
 
-  p + h3, p + h4 {
-    margin-top: 2rem;
-  }
+  // p + h3, p + h4 {
+  //   margin-top: 2rem;
+  // }
 
 }
