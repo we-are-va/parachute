@@ -1,143 +1,58 @@
-// Grid breakpoints
-// $grid-breakpoints: (
-//         xs: 0,
-//         sm: 576px,
-//         md: 768px,
-//         lg: 992px,
-//         xl: 1200px
-// );
+// **** Fonts
+$primary-font: "Khula", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-// $container-max-widths: (
-//         sm: 768px,
-//         md: 992px,
-//         lg: 1000px,
-//         xl: 1220px
-// );
+$font-size-xs: 0.75rem;
+$font-size-small: 0.875rem;
+$font-size-large: 1.125rem;
 
-$grid-gutter-width: 30px;//20px;// 20px;
+// **** Brand Colours
+$blue: #14377d;
+$aqua: #00b0dc;
+$aqua-medium: #63cae1;
+$aqua-light:  #eff7fa;
+$aqua-lightest: #eff7fa;
 
+// **** Other Colours
+$white: #fff;
+$black: #000;
 
-$blue: #14377d;//#253B7A
-$blue-darkest: #313438;
-$gray: #999;
-$blue-med: #3f66a5;
-$blue-light: lighten($blue, 55%);
-$blue-lightest: lighten($blue, 60%);
+// Primary & Secondary Colours
+$primary-color:       $blue;
+$secondary-color:     $aqua;
+$default-color:       $blue;
 
-$white: #ffffff;
-$black: #000000;
+$theme-colors: ();
+$theme-colors: map-merge((
+  "primary": $primary-color,
+  "secondary": $secondary-color,  
+  "white": $white,
+  "light": $aqua-light,
+  "highlight": $aqua-medium,
+), $theme-colors);
+// stylelint-enable
 
-$gold:  #9A8419;
-$red:   #AC1A2F;
-
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-
-$primary: $blue;
-$secondary: $gray;
-$highlight: $red;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
-
-$primary-color: $primary;
-$secondary-color: $secondary;
-$highlight-color: $highlight;
-
-
-// Body
-//
-// Settings for the `<body>` element.
-
-$body-bg: $white;//$blue-darkest;
-$body-color: $gray-900;
-
-
-// Links
-$link-color: $primary;
-$link-decoration: none;
-$link-hover-color: lighten($primary, 20%);
-$link-hover-decoration: underline;
-
-// Fonts
-$font-family-base: 'Maven Pro', 'Helvetica Neue', Arial, sans-serif,
-  -apple-system;
-$font-family-heading: 'Saira', 'Helvetica Neue', Arial, sans-serif, -apple-system;
-$font-family-logo: "Orbitron",'Ubuntu', 'Helvetica Neue', Arial, sans-serif, -apple-system;
-
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25) !default;
-$font-size-sm:                ($font-size-base * .875) !default;
-$font-size-xs:                ($font-size-base * .75) !default;
-$font-size-large: $font-size-lg; 
-
-$font-weight-thin: 200;
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 700;
-$font-weight-base: $font-weight-normal;
-$line-height-base: 1.6;
-
-$headings-font-weight: 400;
-
-$spacer: 1rem;
-$spacers: ();
-
+// Spacing
+// stylelint-disable
 $spacer: 1rem !default;
 $spacers: ();
 $spacers: map-merge((
   0: 0,
-  h: ($spacer * .5),  
+  q: ($spacer * .25),
+  h: ($spacer * .5),
   1: ($spacer * 1),
-  '1h': ($spacer * 1.5),
+  1h: ($spacer * 1.5),
   2: ($spacer * 2),
-  '2-5': ($spacer * 2.5),
+  2h: ($spacer * 2.5),
   3: ($spacer * 3),
-  '3-5': ($spacer * 3.5),
+  3h: ($spacer * 3.5),
   4: ($spacer * 4),
   5: ($spacer * 5),
   6: ($spacer * 6),
   7: ($spacer * 7),
-  8: ($spacer * 8),
-  9: ($spacer * 9),
-  10: ($spacer * 10),
-  11: ($spacer * 11),
-  12: ($spacer * 12),
+  8: ($spacer * 8),  
+  9: ($spacer * 9)
 ), $spacers);
 
 
-$theme-colors: () !default;
-// stylelint-disable-next-line scss/dollar-variable-default
-$theme-colors: map-merge(
-  (
-    "primary":    $primary,
-    "secondary":  $secondary,
-    "highlight":  $highlight,
-    "light":      $light,
-    "dark":       $dark
-  ),
-  $theme-colors
-);
-
-// Buttons
-//
-// For each of Bootstrap's buttons, define text, background, and border color.
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         1.75rem !default;
-
-$btn-padding-y:               $input-btn-padding-y !default;
-$btn-padding-x:               $input-btn-padding-x !default;
-
-// Allows for customizing button radius independently from global border radius
-$btn-border-radius:           1.5rem;
-$btn-border-radius-lg:        1.5rem;
-$btn-border-radius-sm:        1.5rem;
-
-$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
-$nav-link-font-size: 1rem;
+$grid-gutter-width: 30px;
+$gap: ($grid-gutter-width/2);

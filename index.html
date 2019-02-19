@@ -7,27 +7,48 @@ undefined: ''
 
 ---
 <div id="fullpage">
-  <section id="hp-section-1" class="bg-dark text-white fp-noscroll layout-hero pt-3">
-    <img class="teardrop svg" src="{{site.baseurl}}/assets/images/top-strip-2.svg">
-    <div class="container">
-      <div class="row d-flex flex-column">
-        <div class="col-12 col-md-6 text-center">
-          <div class="logo-hero">
-            <img class="svg parachute" alt="" src="{{site.baseurl}}/assets/images/logo-parachute-only.svg" />
-            <img class="svg logo-word" alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo-white.svg" />
-          </div>
+  <section id="intro" class="text-white layout-hero fp-noscroll">
+
+    <div id="hero-content" class="position-relative text-center d-flex flex-column hero-content px-4 px-lg-6">
+      <div class="inner mx-auto">
+        <blockquote class="font-weight-bold mb-3">
+          <p>We help struggling businesses and successful businesses to be prepared for what the future holds.</p>
+        </blockquote>
+
+        <div class="mission-statement text-highlight font-weight-semibold mb-1">
+          <p>Being prepared is what parachute is all about.<br>It’s not a leap, it’s a simple step.</p>
         </div>
-        <div class='intro-text col-12 col-md-6'> 
-          <h2 class='h1'>We got you.</h2>
-          {{ page.intro }}
-          <p>Is your business in trouble? Parachutes is here to help.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id fermentum ipsum. Sed elementum efficitur ultricies. Ut vestibulum aliquet ligula, et elementum dolor gravida at.</p>
+
+        <div class="tagline text-uppercase font-weight-semibold">
+          <p>Making a fall with a controlled landing</p>
         </div>
       </div>
     </div>
+
+    <div id="hero-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        {% assign i = 0 %}
+        {% for image in site.static_files %}
+          {% if image.path contains 'images/hero' %}
+            {% assign bg = site.baseurl | append: image.path %}
+            <div class="carousel-item{% if i==0 %} active{% endif %}" style="background-image:url({{bg}});">
+              <!-- <img src="{{ site.baseurl }}{{ image.path }}" class="d-block" alt=""> -->
+            </div>
+            {% assign i = i | plus:1 %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div> 
+
+    <div class="hero-footer text-center bg-white text-secondary py-3 py-md-4">
+      <div class="col-12 col-md-6 col-lg-6 mx-auto">
+        <p>Parachute offer you an experience that will make you stronger and better prepared next time...</p>
+      </div>
+    </div>
+
   </section>
 
-  <section id="hp-section-2" class="py-5 fp-noscroll section-2 layout-services">
+ <!--  <section id="why-parachute" class="py-5 fp-noscroll section-2 layout-services">
     <div class="container">
       <div class="row justify-content-start">
         <div class="col-12">
@@ -69,5 +90,5 @@ undefined: ''
         {% endfor %}
       </div>
     </div>
-  </section>
+  </section> -->
 </div>

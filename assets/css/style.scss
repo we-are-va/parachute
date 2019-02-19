@@ -3,38 +3,22 @@
 # only Main files contain this front matter, not partials.
 ---
 
-// 9:02am - 10:50am
-
-// Bank Gothic
-// Bank Gothic Lt AT /  Regular
-// Font142
-
-
-// Maven pro
-
-
-// Font
-// 
-// // https://fontpair.co
-// BioRhyme, Karla, Inconsolata, Work Sans, Space Mono, Saira
-//@import url('https://fonts.googleapis.com/css?family=Saira|Orbitron|Maven+Pro|Space+Mono');
-//@import url('https://fonts.googleapis.com/css?family=Lora:400|Open+Sans:400,700');
-@import url('https://fonts.googleapis.com/css?family=Saira:100,200,300|Maven+Pro');
+@import url('https://fonts.googleapis.com/css?family=Khula:300,400,600,700,800');
 
 // Bootstrap
 @import "bootstrap/functions";
 @import 'bootstrap-variables';
 @import 'bootstrap/variables';
 @import 'bootstrap/mixins';
-@import 'bootstrap/root';
-@import 'bootstrap/reboot';
-@import 'bootstrap/grid';
-@import 'bootstrap/type';
-// @import 'bootstrap/tables';
-// @import 'bootstrap/images";
-// @import 'bootstrap/code";
-@import "bootstrap/forms";
-@import 'bootstrap/buttons';
+// @import 'bootstrap/root';
+// @import 'bootstrap/reboot';
+// @import 'bootstrap/grid';
+// @import 'bootstrap/type';
+// // @import 'bootstrap/tables';
+// // @import 'bootstrap/images";
+// // @import 'bootstrap/code";
+// @import "bootstrap/forms";
+// @import 'bootstrap/buttons';
 // @import 'bootstrap/transitions";
 // @import 'bootstrap/dropdown";
 // @import 'bootstrap/button-group";
@@ -84,15 +68,15 @@
 
 // Theme
 @import "base";
-@import "animations";
+// @import "animations";
 @import "type";
 @import "layout";
 
 // Pages
-@import 'pages/home';
-@import 'pages/team';
-@import 'pages/testimonials';
-@import 'pages/services';
+// @import 'pages/home';
+// @import 'pages/team';
+// @import 'pages/testimonials';
+// @import 'pages/services';
 
 @import "main";
 

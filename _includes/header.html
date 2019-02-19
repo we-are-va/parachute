@@ -1,12 +1,23 @@
-<div id="header" class='header {{include.headerClass}}'>
-  <div class="d-flex py-1 align-items-center justify-content-between container">
-    <div class="logo">
-      <a href="{{site.baseurl}}/"><img class="svg" alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo.svg" /></a>
-    </div>
-    <div class="logo-mobile">
-      <a href="{{site.baseurl}}/"><img class="svg"  alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo-mobile.svg" /></a>
-    </div>
-    {% include main-menu.html %}
-    {% include hamburger.html %}
+<nav id="header" class="navbar fixed-top navbar-light bg-primary navbar-expand-md {{include.headerClass}}">
+  <div class="d-flex align-items-center justify-content-between container">
+
+      <div class="navbar-brand logo">
+        <a href="{{site.baseurl}}/"><img class="svg" alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo.svg" /></a>
+      </div>
+
+      <button id="toggle-main-menu" class="hamburger hamburger--slider" type="button" data-toggle="collapse" data-target="#navbarLayout" aria-controls="navbarLayout" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarLayout">
+        <ul class="nav" id="#main-menu">
+          <li class="nav-item"><a href="#whyparachute" class="nav-link">Why Parachute?</a></li>
+          <li class="nav-item"><a href="#obligationfree" class="nav-link">Obligation Free Help</a></li>
+          <li class="nav-item"><a href="#ourpromise" class="nav-link">Our Promise</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </div>
   </div>
-</div>
+</nav>

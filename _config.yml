@@ -1,27 +1,11 @@
-baseurl: '/parachute'
+baseurl: ''
 exclude: ['README.md']
 permalink: pretty
 title: 'Parachute'
 
-collections:
-  services:
-    output: true
-    permalink: /services/:path/
-  team:
-    output: true
-    permalink: /team/:path/
-  testimonials:
-    output: true
-    permalink: /testimonials/:path/
-
 defaults:
   - scope:
-      type: services
-    values:
-      layout: service
-      bodyClass: page-services-single
-  - scope:
-      path: "images"
+      path: "assets/images"
     values:
       image: true
 

@@ -48,7 +48,7 @@
   }
   .testimonials-jobtitle {
     display: inline-block;
-    color: $secondary;
+    color: $secondary-color;
   }
   .testimonials-content {
     flex: 1 0 100%;
@@ -72,7 +72,7 @@
       width: 3rem;
       height: 2rem;
       font: 6em/1.08em "PT Sans", sans-serif;
-      color: $primary;
+      color: $primary-color;
       text-align: center;
     }
     // blockquote:after {

@@ -16,10 +16,10 @@
   .hamburger-inner::after {
     background: $white;
   }
-  .hamburger-inner::after {
-    width: 18px;
-    right: 0;
-  }
+  // .hamburger-inner::after {
+  //   width: 18px;
+  //   right: 0;
+  // }
   &.is-active {
     .hamburger-inner::after {
       width: inherit;

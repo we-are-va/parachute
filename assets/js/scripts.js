@@ -1,38 +1,52 @@
 $(function() {
-  // console.log( "ready!" );
+  console.log( "ready!" );
+  
+  var $hero_footer = $('.layout-hero .hero-footer');
+  var $navbar = $("#header");
+
+  function load_resize() {
+    console.log("HEY");
+    var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight() + 30;
+    console.log(hero_content_height);
+    $('#hero-content, #hero-carousel').css('height', hero_content_height);
+  }
+
+  load_resize();
+  $(window).resize(function() { load_resize(); }); // onresize
+  // $(window).load(function(){ load_resize(); }); // onload     
 
   // Scrolling Sticky Header Functions
   $(window).scroll(function() {
 
-    var scroll = $(window).scrollTop();
-    var divheight = $(".layout-intro").outerHeight() - 50;
-    if($('body').hasClass('page-home')) {
-      divheight = $(".layout-hero").outerHeight() - 50;
-    }
+    // var scroll = $(window).scrollTop();
+    // var divheight = $(".layout-intro").outerHeight() - 50;
+    // if($('body').hasClass('page-home')) {
+    //   divheight = $(".layout-hero").outerHeight() - 50;
+    // }
 
     //console.log(scroll + ", " + divheight);
 
-    if (scroll >= divheight) {
-      //console.log('theme-dark');
-      $("#header").removeClass('theme-light').addClass('theme-dark'); 
-    } else { 
-      //console.log('no');
-      $("#header").addClass('theme-light').removeClass('theme-dark'); 
-    }
+    // if (scroll >= divheight) {
+    //   //console.log('theme-dark');
+    //   //$("#header").removeClass('theme-light').addClass('theme-dark'); 
+    // } else { 
+    //   //console.log('no');
+    //   //$("#header").addClass('theme-light').removeClass('theme-dark'); 
+    // }
 
     
   });
 
-    var menuTrigger = $('#toggle-main-menu-mobile');
-    var menuContainer = $('#main-menu-mobile');
+   //  var menuTrigger = $('#toggle-main-menu');
+   //  var menuContainer = $('#main-menu');
 
-   // fixedheader();
-    menuTrigger.on('click tap press', function (e) {
-      console.log('hey');
-      menuContainer.toggleClass('open');
-      menuTrigger.toggleClass('is-active');
-      $('body').toggleClass('lock-scroll');
-    });
+   // // fixedheader();
+   //  menuTrigger.on('click tap press', function (e) {
+   //    console.log('hey');
+   //    menuContainer.toggleClass('open');
+   //    menuTrigger.toggleClass('is-active');
+   //    $('body').toggleClass('lock-scroll');
+   //  });
     
     // $('#fullpage').fullpage({
     //   anchors:['hp-section1', 'hp-section2', 'hp-section3'],
