@@ -1,3 +1,15 @@
+// Container fixes on mobile
+@include media-breakpoint-down(sm) {
+  .container {
+    //padding-left: 25px;// $grid-gutter-width;
+    //padding-right: 25px;// $grid-gutter-width;
+  }
+  section .col-12 {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 .page {
   display: flex;
   min-height: 100vh;
@@ -32,7 +44,9 @@
   transition: all 0.35s ease-out;
 
   @include media-breakpoint-down(md) {
-    height: 56px;
+    height: $navbar-height-collapsed;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   #navbarLayout {
@@ -76,7 +90,7 @@
     background-color: $primary-color;
    // display: block !important;
     position: fixed;
-    top: 56px;
+    top: $navbar-height-collapsed;
     left: 0;
     width: 100%;
     height: 0;
@@ -89,10 +103,43 @@
     align-items: center;
     flex-direction: column;
 
+    #main-menu {
+      font-size: 1.5rem;
+      text-align: center;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      > li {
+        opacity: 0;
+        //animation: fadeInRight 0.5s ease forwards;
+        //animation-delay: 0.35s;
+      }
+      > li > a {
+        font-weight: 700;
+        display: inline-block;
+        &:hover:after,
+        &:focus:after,
+        &:active:after {
+          width: 90%;
+        }
+        &:after {
+          bottom: 0.25rem;
+          height: 4px;
+        }
+      }
+
+    }
+
+    li.address {
+      display: none !important;
+    }
+    .social {
+      margin-top: 2rem !important;
+    }
+
     &.show {
       opacity: 1;
       visibility: visible;
-      height: calc(100vh - 56px);
+      height: calc(100vh - #{$navbar-height-collapsed});
       z-index: 1020;
       border-top: 3px solid $white;
       #main-menu > li {
@@ -107,41 +154,9 @@
         &:nth-of-type(4) {
           animation-delay: 0.5s;
         }
-        &:nth-of-type(5) {
-          animation-delay: 0.55s;
-        }
-        &:nth-of-type(6) {
-          animation-delay: 0.6s;
-        }
       }
     }
 
-    #main-menu {
-      font-size: 1.5rem;
-      text-align: center;
-      flex-wrap: nowrap;
-      flex-direction: column;
-    }
-    ul.nav>li>a {
-      font-weight: 700;
-      display: inline-block;
-      &:hover:after,
-      &:focus:after,
-      &:active:after {
-        width: 90%;
-      }
-      &:after {
-        bottom: 0.25rem;
-        height: 4px;
-      }
-    }
-
-    li.address {
-      display: none !important;
-    }
-    .social {
-      margin-top: 2rem !important;
-    }
 
     @include max(375px) {
       #main-menu {

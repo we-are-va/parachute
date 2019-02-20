@@ -1,13 +1,13 @@
 <div class="contact link-white">
   <h2>Parachute is here with <br>you and for you. <br><span class="text-highlight">Reach out and let us help.</span></h2>
-  <ul class="list-unstyled font-size-sm font-weight-light">
+  <ul class="list-unstyled font-size-sm font-weight-light mt-2 mt-md-0">
     <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
     <li><a class="tel" href="tel:{{ site.data.contact.phone| replace: " ", "" }}">{{ site.data.contact.phone }}</a></li>
     <li class="address mt-1">{{ site.data.contact.street }}<br>{{ site.data.contact.suburb }}</li>
   </ul>
 </div>
 
-<ul class="mt-7 mb-h social list-unstyled list-inline">
+<ul class="mt-2 mt-lg-7 mb-h social list-unstyled list-inline">
   {% for platform in site.data.social %}
     <li class="list-inline-item">
       <a href="{{ platform.url }}" target="blank"><img class="svg" src="{{site.baseurl}}/assets/images/{{ platform.name }}.svg"><span class="sr-only">{{ platform.name }}</span></a>

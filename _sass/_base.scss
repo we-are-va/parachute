@@ -120,46 +120,17 @@ h3, .h3 {
   font-size: 1.3rem;
 }
 
-// .h4, h4 {
-//   font-size: 1.2rem;
-//   font-weight: bold;
-// }
-
-// .h5, h5 {
-//   font-size: 1.1rem;
-// }
-
-// .btn-light {
-//   color: $gray-900;
-//   &:hover {
-//     background-color: $blue-light;
-//   }
-//   &:active, &:focus, &.focus {
-//     //box-shadow:  0 0 0 0.15rem rgba($highlight-color,.5);
-//   }
-// }
-
 .btn {
-  border-width: 2px;
-  text-transform: uppercase;
-  font-weight: bold;
+  border-radius: 0;
+  background: transparent;
+  border:1px solid $highlight-color;
+  color: $white;
+  font-weight: 300;
+  text-transform: none;
+  padding: .475rem 1.95rem 0.275rem;
+  &:hover, &:focus, &:active, &:hover:active {
+    background-color: $secondary-color !important;
+    border-color: $secondary-color;
+    box-shadow: none !important;
+  }
 }
-
-
-
-// .btn-light {
-//   background-color: $white;
-//   border-color: $secondary-color;
-//   border-width: 2px;
-//   color: $secondary-color;
-//   //box-shadow:  0 0 0 2px $accent-color;
-//   &:active, &:hover, &:focus {
-//     background-color:$secondary-color;
-//     color: $white;//darken($secondary-color, 10%);
-//     border-color: $secondary-color;//black;
-//   }  
-//   &:active, &:focus, &.focus {
-//    //.box-shadow:  0 0 0 0.15rem rgba($highlight-color,.5);
-//   }
-// }
-
