@@ -1,4 +1,4 @@
-<nav id="header" class="py-1 py-md-1h navbar fixed-top navbar-light bg-primary navbar-expand-md {{include.headerClass}}">
+<nav id="header" class="py-h py-md-1h navbar fixed-top navbar-light bg-primary navbar-expand-md {{include.headerClass}}">
   <div class="d-flex align-items-center justify-content-between container">
       <div class="navbar-brand logo">
         <a href="{{site.baseurl}}/"><img class="" alt="{{site.title}}" src="{{site.baseurl}}/assets/images/logo.svg" /></a>
@@ -17,6 +17,11 @@
           <li class="nav-item"><a href="#ourpromise" class="nav-link">Our Promise</a></li>
           <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
         </ul>
+
+        <div class="d-block d-md-none text-center mt-4 text-white">
+          {% include contact.html %}
+        </div>
+
       </div>
   </div>
 </nav>
