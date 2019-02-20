@@ -215,25 +215,34 @@ textarea {
 .body-content {
   a:not(.btn) {
     position: relative;
-    color: $secondary-color;
+    color: $gray-600;
     &:after {
       content: "";
       position: absolute;
       left:0;
       right: 0;
-      bottom:0rem;
+      bottom:0.4rem;
       width: 100%;
-      border-top: 2px solid $gray-300;//t lighten($default-color, 25%);
+      border-top: 2px solid rgba($primary-color, 0.3);//$gray-300;//t lighten($default-color, 25%);
     }
     &:hover, &:focus {
       text-decoration: none !important;
       &:after {
-        border-top-color: $secondary-color;
+        border-top-color: mix($secondary-color, $primary-color, 80%);
       } 
     }
   }
 
+  h2 + h3, h2 + h4 {
+    margin-top: 2rem;
+  }
+  p + h2 {
+    margin-top: 3rem;
+  }
 
+  p + h3, p + h4 {
+    margin-top: 2rem;
+  }
 
 
   // hr {
@@ -275,15 +284,4 @@ textarea {
   //   }
   // }
 
-  // h2 + h3, h2 + h4 {
-  //   margin-top: 2rem;
-  // }
-  // p + h2 {
-  //   margin-top: 3rem;
-  // }
-
-  // p + h3, p + h4 {
-  //   margin-top: 2rem;
-  // }
-
-}
+ }
