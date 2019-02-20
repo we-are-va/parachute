@@ -5,26 +5,22 @@ $(function() {
 
   load_resize();
 
-
   function load_resize() {
     $navbar = $("#header"); 
     $('body').css('padding-top', $navbar.outerHeight());
 
-    console.log("width is " + $(window).width());
-    if($(window).width() < 768) {
-      return;
+    if($(window).width() >= 768) {
+      var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight();
+      $('#hero-content, #hero-carousel').css('height', hero_content_height);
     }
 
-    var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight();
-    $('#hero-content, #hero-carousel').css('height', hero_content_height);
-    $('.layout-image').css('height', ($(window).width()/2.5));
-   
+    if($(window).width() >= 992) {
+      $('.layout-image').css('height', ($(window).width()/2.5));
+    }    
+  
 
   }
 
-  // $(window).load(function(){ 
-  //   load_resize(); 
-  // }); // onload     
   
   $(window).resize(function() { 
     load_resize(); 

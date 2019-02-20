@@ -5,7 +5,7 @@ bodyClass: page-home
 ---
 <div id="fullpage">
   <section id="intro" class="text-white layout-hero fp-noscroll">
-    <div id="hero-content" class="position-relative text-center d-flex flex-column hero-content px-0 px-md-2 px-lg-6">
+    <div id="hero-content" class="position-relative text-center d-flex flex-column hero-content px-0 px-md-2 px-lg-3 px-xl-6">
       <div class="inner mx-auto">
         <blockquote class="font-weight-bold mb-1h mb-md-3">
           <p>We help struggling businesses and successful businesses to be prepared for what the future holds.</p>
@@ -36,8 +36,8 @@ bodyClass: page-home
       </div>
     </div> 
 
-    <div class="hero-footer text-center bg-white text-secondary py-3 py-lg-4">
-      <div class="col-12 col-md-10 col-lg-6 mx-auto">
+    <div class="hero-footer text-center bg-white text-secondary py-3 py-md-3 py-xl-4">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-6 mx-auto">
         <p>Parachute offer you an experience that will make you stronger and better prepared next time...</p>
       </div>
     </div>
@@ -45,10 +45,10 @@ bodyClass: page-home
 
   <!-- Why Parachute ? -->
   <section id="whyparachute" class="bg-light layout layout-image">
+    <div class="image d-flex d-md-none"></div>
     <div class="h-100 container">
       <div class="h-100 row justify-content-end align-items-center"> 
-        <div class="image col-12 col-md-6 d-flex d-md-none"></div>
-        <div class="col-12 col-md-6 col-xl-5 pt-4 pb-5 py-md-5 body-content">
+        <div class="col-12 col-md-7 col-lg-6 pl-lg-2 pl-xl-1 col-xl-5 pt-4 pb-5 py-md-5 body-content">
           <h2 class="">Why Parachute?</h2>
           <p><strong>We believe in being prepared in advance and knowing that in a crisis there’s a solution.</strong></p>
           <p>Parachute is all about fixing problems before they become catastrophic and turning a crisis into a solution.</p>
@@ -63,7 +63,7 @@ bodyClass: page-home
   <section id="wearewithyou" class="bg-secondary text-white layout">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-12 col-md-11 col-lg-8 py-5 py-md-6">
+        <div class="col-12 col-md-11 col-lg-9 col-xl-8 py-5 py-md-6">
           <h2 class="">We’re with you</h2>
           <p class="font-size-lg font-weight-light">No-one started a business with the intent of being unsuccessful. Whether you’re already in free fall, trying to ‘turn it around’ or simply need someone to take a tandem-leap with you – we’re here.</p>
           <p class='h2 mb-0'>Ensuring soft landings and making sure you can start again – Parachute is here for you.</p>
@@ -76,7 +76,7 @@ bodyClass: page-home
   <section id="howwehelp" class="bg-primary text-white layout">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-12 col-lg-8 py-5 py-6">
+        <div class="col-12 col-lg-10 col-xl-8 py-5 py-6">
           <h2 class="mb-2h">How We Help – <span class="text-highlight">Obligation Free</span></h2>
           <div class="row">
             {% for action in site.data.howwehelp %}
@@ -95,10 +95,10 @@ bodyClass: page-home
 
   <!-- Our Promise ? -->
   <section id="ourpromise" class="bg-white layout layout-image">
+    <div class="image d-flex d-md-none"></div>
     <div class="h-100 container">
       <div class="h-100 row justify-content-end align-items-center">
-        <div class="image col-12 col-md-6 d-flex d-md-none"></div>
-        <div class="col-12 col-md-6 col-xl-5 pt-4 pb-3 py-md-5 body-content">
+        <div class="col-12 col-md-7 col-lg-6 pl-lg-2 pl-xl-1 col-xl-5 pt-4 pb-5 py-md-5 body-content">
           <h2>Our Promise</h2>
           <p><strong>We are on this journey with you;</strong><br>providing expert business advice, Human Resources, legal services, advertising and marketing, sales and staff training, mediation and mentoring.</p>
           <p>Our people have dealt with thousands of businesses over several evolving decades. We are a one-stop solution team.</p>
@@ -112,7 +112,7 @@ bodyClass: page-home
   <section id="testimonials" class="px-1 px-md-0 bg-light text-primary layout">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-12 col-md-11 col-lg-8 pt-5 pt-md-6 pb-2">
+        <div class="col-12 col-md-11 col-lg-9 col-xl-8 pt-5 pt-md-6 pb-2">
           <h2 class="sr-only">Testimonials</h2>
 
             <div id="testimonials-carousel" class="carousel slide" data-ride="carousel">
@@ -147,10 +147,10 @@ bodyClass: page-home
   <section id="contact" class="bg-primary text-white link-white layout">
     <div class="container pt-4 pt-md-4 pb-3">
       <div class="row">
-        <div class="d-flex flex-column justify-content-between col-12 col-md-5 col-lg-4 pt-md-1">
+        <div class="d-flex flex-column justify-content-between col-12 col-md-5 col-lg-5 col-xl-4 pt-md-1">
           {% include contact.html %}
          </div>
-        <div class="mt-4 col-12  mt-md-0 offset-md-1 col-md-6 offset-lg-2 col-lg-6">
+        <div class="mt-4 col-12 mt-md-0 offset-md-1 col-md-6 offset-lg-1 col-lg-6 offset-xl-2 col-xl-6">
           <form id="contact-form" class="contact-form" method="post" data-success="Message successfully sent!">
 
             <div class="form-group position-relative">
