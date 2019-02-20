@@ -1,5 +1,33 @@
 baseurl: ''
-exclude: ['README.md']
+markdown : kramdown
+exclude: 
+  - ['README.md']
+  - .asset-cache
+  - .bundle
+  - assets/manifest.json
+  - .jekyll-assets-cache
+  - .sass-cache
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - Capfile
+  - config
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.js
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - manifest.json
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
 permalink: pretty
 title: 'Parachute'
 

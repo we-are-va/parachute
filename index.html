@@ -142,49 +142,60 @@ undefined: ''
         </div>
       </div>
     </div>
-  </section>  
+  </section> 
 
- <!--  <section id="why-parachute" class="py-5 fp-noscroll section-2 layout-services">
-    <div class="container">
-      <div class="row justify-content-start">
-        <div class="col-12">
-          <h2 class="our-purpose-title mb-2">Our sole purpose is to help our clients.</h2>
-        </div>
-        {% for service in site.services %}
-        <div class="col-12 col-md-4 mb-1">
-          <div class="service service-summary">
-            <div class="service-content">
-              <h2 class="service-title">
-                <a href="{{site.baseurl}}{{ service.url }}">{{ service.title }}</a>
-              </h2>
-              {{ service.content | markdownify | strip_html | truncate: 100 }}
+  <!-- Contact us -->
+  <section id="contact" class="bg-primary text-white link-white layout">
+    <div class="container pt-7 pb-3">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <h2>Parachute is here with you and for you. <br><span class="text-highlight">Reach out and let us help.</span></h2>
+          <ul class="list-unstyled font-size-sm font-weight-light">
+            <li><a href="mailto:{{ site.data.contact.email }}">{{ site.data.contact.email }}</a></li>
+            <li><a class="tel" href="tel:{{ site.data.contact.phone| replace: " ", "" }}">{{ site.data.contact.phone }}</a></li>
+            <li class="mt-1">{{ site.data.contact.street }}<br>{{ site.data.contact.suburb }}</li>
+          </ul>
+
+          <ul id="social" class="social list-unstyled list-inline">
+            {% for platform in site.data.social %}
+              {{ platform.name }}
+              <li class="list-inline-item">
+                <a class="svg" href="{{ platform.url }}" target="blank"><img src="{{site.baseurl}}/assets/images/{{ platform.name }}.svg"><span class="sr-only">{{ name }}</span></a>
+              </li>
+            {% endfor %}         
+          </ul>
+
+
+         </div>
+        <div class="col-12 col-md-6">
+          <form id="contact-form" class="contact-form" method="post" data-success="Message successfully sent!">
+
+            <div class="form-group position-relative">
+              <label class="" for="contact-name">Name</label>
+              <input type="email" class="form-control" id="contact-name">
             </div>
-          </div>
-        </div>
-        {% endfor %}
-        <div class="col-12 text-center">
-          <a class="btn btn-light mt-2" href="{{site.baseurl}}/services">View All Services</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="hp-section-3" class="py-5 section-3 fp-noscroll layout-features">
-    <div class="container">
-      <div class="row text-center justify-content-center">
-        <div class="col-12">
-          <h2 class="text-uppercase h1 title text-center mb-4">Our Features</h2>
+            <div class="form-group position-relative">
+              <label class="" for="contact-company">Company</label>
+              <input type="email" class="form-control" id="contact-company">
+            </div>
+
+            <div class="form-group position-relative">
+              <label class="" for="contact-email">Email address</label>
+              <input type="email" class="form-control" id="contact-email">
+            </div> 
+            
+            <div class="form-group form-group-textarea position-relative">
+              <label class="" for="contact-message">Message</label>
+              <textarea id="message" name="message" class="form-control" required ></textarea>
+            </div>
+            <div class="form-actions text-right position-relative">
+              <button class="btn btn-primary" type="submit">Send</button>
+            </div>
+          </form>
         </div>
-        {% for feature in site.data.features %}
-        <div class="col-12 col-md-6 col-lg-4 mb-2">
-          <div class="feature">
-            {% if feature.image %}<div class="mb-1 feature-image"><img class="" alt="{{ feature.title }} logo" src="{{ feature.image }}" /></div> {% endif %}
-            <h3 class="feature-title">{{ feature.title }}</h3>
-            <div class="feature-content">{{ feature.description }}</div>
-          </div>
-        </div>
-        {% endfor %}
       </div>
     </div>
-  </section> -->
+  </section> 
+
 </div>

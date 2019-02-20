@@ -16,7 +16,6 @@
       .inner {
         max-width: 35rem;
       }
-
     }
   }
 
@@ -100,6 +99,7 @@
   }
 }
 
+// HOW WE HELP
 #howwehelp {
   p {
     font-weight: 300;
@@ -117,7 +117,7 @@
   background-image: url(../images/square-office-chat.jpg);
 }
 
-// Testimonials
+// TESTIMONIALS
 #testimonials {
   p {
     font-size: 1.1rem;
@@ -135,6 +135,77 @@
     }
   }
 }
+
+
+
+
+// FORMS
+.form-control {
+  border: none;
+  border-bottom:1px solid $highlight-color;
+  background: transparent !important;
+  border-radius: 0;
+  color: $white;
+  padding-left: 0;
+  padding-bottom: 0rem;
+  padding-top: 1rem;
+  height: 2.5rem;
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none;
+    color: $white;
+  }
+}
+
+textarea {
+  min-height: 10rem;
+}
+
+
+.form-group {
+  label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    //top: 9px;
+    color: #fff;
+    transition: .3s;
+    z-index: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+
+  &.form-group-textarea label {
+    top: 0;
+    bottom: auto;
+  }
+
+  &.focus label {
+    top: -0.3rem;
+    font-size: 0.75rem;
+    color: lighten($highlight-color, 15%);//tint($highlight-color, 50%);
+    transition: 0.3s;
+  }
+}
+
+
+
+.btn {
+  border-radius: 0;
+  background: transparent;
+  border:1px solid $highlight-color;
+  color: $white;
+  font-weight: 300;
+  text-transform: none;
+  padding: .475rem 1.95rem 0.275rem;
+  &:hover, &:focus, &:active, &:hover:active {
+    background-color: $secondary-color !important;
+    border-color: $secondary-color;
+    box-shadow: none !important;
+  }
+}
+
 
 // Type Styling for body content
 .body-content {

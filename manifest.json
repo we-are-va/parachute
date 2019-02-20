@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [        
+        "scripts/main.js"
+      ],
+      "vendor": [ 
+        "../node_modules/autoresize-textarea/dist/autoresize-textarea.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    }
+  }
+}

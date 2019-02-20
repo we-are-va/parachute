@@ -2,7 +2,7 @@
 $primary-font: "Khula", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $font-size-xs: 0.75rem;
-$font-size-sm: 0.825rem;
+$font-size-sm: 0.875rem;
 $font-size-lg: 1.5rem;
 
 // **** Brand Colours
@@ -20,6 +20,7 @@ $black: #000;
 $primary-color:       $blue;
 $secondary-color:     $aqua;
 $default-color:       $blue;
+$highlight-color: $aqua-medium;
 
 $theme-colors: ();
 $theme-colors: map-merge((
