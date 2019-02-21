@@ -22,6 +22,7 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - assets
   - manifest.json
   - vendor/bundle/
   - vendor/cache/
@@ -41,8 +42,8 @@ collections:
   testimonials:
 
 
-sass:
-  style: compressed # possible values: nested expanded compact compressed
+# sass:
+#   style: compressed # possible values: nested expanded compact compressed
 
 # google_analytics_id: null
 

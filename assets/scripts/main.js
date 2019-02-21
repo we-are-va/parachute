@@ -28,7 +28,7 @@ $(function() {
   // Carousel
   $('#hero-carousel').carousel({
     interval: 6000, pause: false, ride: true
-  })
+  });
 
   $(".form-group input, .form-group textarea").focusout(function(){
       if($(this).val() === ""){
@@ -105,13 +105,16 @@ $(function() {
     });
   });
 
-
-    // $('#fullpage').fullpage({
-    //   anchors:['section1', 'section2', 'section3'],
-    //   scrollOverflow: true,
-    //   css3:false
-    //  // normalScrollElements: '.map'
-    // });
+    // if($(window).width() >= 992) {
+    //   $('#fullpage').fullpage({
+    //     anchors:['section1','section2', 'section3'],
+    //     scrollOverflow: true,
+    //     autoScrolling:true,
+    //     slideSelector: '',
+    //     //css3:false
+    //     normalScrollElements: '#intro'
+    //   });
+    // }
 
     /*
      * Replace all SVG images with inline SVG

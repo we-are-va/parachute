@@ -10,7 +10,6 @@ var gulpif       = require('gulp-if');
 var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
-var less         = require('gulp-less');
 var merge        = require('merge-stream');
 var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
@@ -24,29 +23,8 @@ var shell = require("shelljs");
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder-nobower')('./manifest.json');
-
-// `path` - Paths to base asset directories. With trailing slashes.
-// - `path.source` - Path to the source files. Default: `assets/`
-// - `path.dist` - Path to the build directory. Default: `dist/`
 var path = manifest.paths;
-path.dist = "_site/assets/";
-
-// `globs` - These ultimately end up in their respective `gulp.src`.
-// - `globs.js` - Array of asset-builder JS dependency objects. Example:
-//   ```
-//   {type: 'js', name: 'main.js', globs: []}
-//   ```
-// - `globs.css` - Array of asset-builder CSS dependency objects. Example:
-//   ```
-//   {type: 'css', name: 'main.css', globs: []}
-//   ```
-// - `globs.images` - Array of image path globs.
-// - `globs.bower` - Array of all the main Bower files.
 var globs = manifest.globs;
-
-// `project` - paths to first-party assets.
-// - `project.js` - Array of first-party JS assets.
-// - `project.css` - Array of first-party CSS assets.
 var project = manifest.getProjectGlobs();
 
 // CLI options
@@ -72,16 +50,6 @@ var onError = function(err) {
   this.emit('end');
 };
 
-// ## Reusable Pipelines
-// See https://github.com/OverZealous/lazypipe
-
-// ### CSS processing pipeline
-// Example
-// ```
-// gulp.src(cssFiles)
-//   .pipe(cssTasks('main.css')
-//   .pipe(gulp.dest(path.dist + 'styles'))
-// ```
 var cssTasks = function(filename) {
   return lazypipe()
     .pipe(function() {
@@ -89,9 +57,6 @@ var cssTasks = function(filename) {
     })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
-    })
-    .pipe(function() {
-      return gulpif('*.less', less());
     })
     .pipe(function() {
       return gulpif('*.scss', sass({
@@ -122,13 +87,6 @@ var cssTasks = function(filename) {
     })();
 };
 
-// ### JS processing pipeline
-// Example
-// ```
-// gulp.src(jsFiles)
-//   .pipe(jsTasks('main.js')
-//   .pipe(gulp.dest(path.dist + 'scripts'))
-// ```
 var jsTasks = function(filename) {
   return lazypipe()
     .pipe(function() {
@@ -150,9 +108,6 @@ var jsTasks = function(filename) {
     })();
 };
 
-// ### Write to rev manifest
-// If there are any revved files then write them to the rev manifest.
-// See https://github.com/sindresorhus/gulp-rev
 var writeToManifest = function(directory) {
   return lazypipe()
     .pipe(gulp.dest, path.dist + directory)
@@ -164,13 +119,6 @@ var writeToManifest = function(directory) {
     .pipe(gulp.dest, path.dist)();
 };
 
-// ## Gulp tasks
-// Run `gulp -T` for a task summary
-
-// ### Styles
-// `gulp styles` - Compiles, combines, and optimizes Bower CSS and project CSS.
-// By default this task will only log a warning if a precompiler error is
-// raised. If the `--production` flag is set: this task will fail outright.
 gulp.task('styles', function() {
   var merged = merge();
   manifest.forEachDependency('css', function(dep) {
@@ -245,7 +193,6 @@ gulp.task('clean', require('del').bind(null, [path.dist]));
 gulp.task('watch', function() {
 
   shell.exec("bundle exec jekyll build");
-
   browserSync.init({
     // tunnel: true,
     // open: false,
@@ -255,8 +202,7 @@ gulp.task('watch', function() {
     },
     server: ['_site/']
   });
-  gulp.watch(['_sass/**/*'], ['styles']);
-  // gulp.watch([path.source + 'styles/**/*'], ['styles']);
+  gulp.watch([path.source + 'styles/**/*'], ['styles']);
   gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
   gulp.watch([path.source + 'images/**/*'], ['images']);
   gulp.watch(['manifest.json'], ['build']);
@@ -267,9 +213,7 @@ gulp.task('watch', function() {
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {  
   shell.exec("bundle exec jekyll build");
-  runSequence('scripts',
-              ['images'],
-              callback);
+  runSequence('styles','scripts',['images'], callback);
 });
 
 
@@ -282,7 +226,7 @@ gulp.task('default', ['clean'], function() {
 
 // 'gulp site' -- builds site with development settings
 // 'gulp site --prod' -- builds site with production settings
-gulp.task("site", done => {
+gulp.task("site", function() {
   if (!argv.prod) {
     shell.exec("bundle exec jekyll build --config _config.yml,_config.dev.yml");
     done();
