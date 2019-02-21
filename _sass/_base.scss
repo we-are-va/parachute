@@ -134,3 +134,10 @@ h3, .h3 {
     box-shadow: none !important;
   }
 }
+
+.alert {
+  background: $red;
+  color: $white;
+  border-radius: 0;
+  border: none;
+}

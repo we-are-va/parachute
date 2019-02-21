@@ -225,7 +225,6 @@ textarea {
   min-height: 8rem;
 }
 
-
 .form-group {
   label {
     position: absolute;
@@ -242,7 +241,10 @@ textarea {
 
   &.form-group-textarea label {
     top: 0;
+    top: 10px;
     bottom: auto;
+    width: 90px;
+
   }
 
   &.focus label {
@@ -252,6 +254,11 @@ textarea {
     transition: 0.3s;
   }
 }
+
+#thankyou, #form-error {
+  display: none;
+}
+
 
 
 // Type Styling for body content

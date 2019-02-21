@@ -1,7 +1,8 @@
 $(function() {
   
   var $hero_footer = $('.layout-hero .hero-footer');
-  var $navbar = $("#header");
+  var $navbar      = $("#header");
+  var $form = $("#contact-form");
 
   load_resize();
 
@@ -20,12 +21,10 @@ $(function() {
   
 
   }
-
   
   $(window).resize(function() { 
     load_resize(); 
   }); // onresize
-
 
   $(".form-group input, .form-group textarea").focusout(function(){
       if($(this).val() === ""){
@@ -33,12 +32,78 @@ $(function() {
       }
   }); 
   $('.form-group input, .form-group textarea').focus(function() {
-    console.log('focused');
     $(this).parent().addClass('focus');
   });
 
+  $form.submit(function( event ) {
+    console.log( "Handler for .submit() called." );
+    event.preventDefault();
+
+    var datastring = $(this).serializeArray();
+
+    var fields = '<ul>'; var br = '';
+
+    $.each(datastring, function( i, fld ) {
+      br = fld.name !== 'Message' ? '' : '<br>';
+      fields+="<li><b>" + fld.name + ":</b> " + br + fld.value + "</li>";
+    });
+
+    fields+="</ul>";
+
+    var html = "<p>Hello!</p><p>You have received a new Parachute website enquiry.</p>" +
+    fields + "<p>&nbsp;</p><p>&nbsp;</p><hr><p><em><small>This is an automated message from https://www.parachute.com.au</small></em></p>";
+
+    $.ajax({
+      type: 'POST',
+      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+      data: {
+        //'key': 'qQ2_bQU2BL_ad3Sdvy7RgA', // SAJEN MANDRILL API KEY
+        'key': 'QcXJRxVWxBu7qctC1bgv9g', // VA MANDRILL API KEY
+        'message': {
+          'from_email': 'web@parachute.com.au',
+          'to': [
+          // {
+          //     'email': 'info@parachute.com.au' 
+          //     'name': 'Parachute Team',
+          //     'type': 'to'
+          //   },
+            {
+              'email': 'skye@weareva.com.au',
+              'name': 'Sajen Team',
+              'type': 'to'
+            }
+          ],
+          'autotext': 'true',
+          'subject': 'Web enquiry from ' + $("#contact-name").val(),
+          'html': html,
+          'track_opens': true,
+          'track_clicks': true
+          // optional merge variables. must also be setup on the list management side of mandrill
+          /* 'merge_vars': [{
+            'rcpt': $('.email').val(),
+            'vars': [{
+              'name': 'FRIEND',
+              "content": 'Skye'
+            }, {
+              'name': 'YEARS',
+              'content': '27'
+            }]
+          }], */
+        }
+      }
+    }).fail(function(response) {
+      $("#form-error").html("Sorry, there was an error sending your enquiry. Please try again soon or email help@parachute.com.au directly.").show().delay(5000).fadeOut(300);
+    }).done(function(response) {
+      console.log("Enquiry sent!");
+      var thanks_html = $("#thankyou").html().replace("[NAME]", $("#contact-name").val()); 
+      $form.slideUp(300);
+      $("#thankyou").html(thanks_html).slideDown(500);
+    });
+  });
+
+
     // $('#fullpage').fullpage({
-    //   anchors:['hp-section1', 'hp-section2', 'hp-section3'],
+    //   anchors:['section1', 'section2', 'section3'],
     //   scrollOverflow: true,
     //   css3:false
     //  // normalScrollElements: '.map'
