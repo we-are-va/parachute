@@ -38,7 +38,7 @@ $(function() {
   sr.reveal('section p', { duration: 500 }, 50);
   
   //Scrollmagic
-  if($(window).width() >= 992) {
+  if($(window).width() > 1024) {
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {
         triggerHook: 'onLeave'              
