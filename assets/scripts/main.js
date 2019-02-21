@@ -30,6 +30,12 @@ $(function() {
     interval: 6000, pause: false, ride: true
   });
 
+  // ScrollReveal
+  window.sr = new ScrollReveal();
+  sr.reveal('section h2, .reveal, section header');
+  // Reveal in a ripple efffect
+  sr.reveal('.howwehelp-action', { duration: 800 }, 100);
+  sr.reveal('section p', { duration: 500 }, 50);
   //Scrollmagic
   // var controller = new ScrollMagic.Controller({
   //   globalSceneOptions: {
