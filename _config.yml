@@ -1,4 +1,4 @@
-baseurl: ''
+baseurl: '/parachute'
 markdown : kramdown
 exclude: 
   - 'README.md'
