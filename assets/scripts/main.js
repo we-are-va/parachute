@@ -4,8 +4,6 @@ $(function() {
   var $navbar      = $("#header");
   var $form = $("#contact-form");
 
-  load_resize();
-
   function load_resize() {
     $navbar = $("#header"); 
     $('body').css('padding-top', $navbar.outerHeight());
@@ -21,10 +19,16 @@ $(function() {
   
 
   }
-  
+
+  load_resize();
   $(window).resize(function() { 
     load_resize(); 
   }); // onresize
+
+  // Carousel
+  $('#hero-carousel').carousel({
+    interval: 6000, pause: false, ride: true
+  })
 
   $(".form-group input, .form-group textarea").focusout(function(){
       if($(this).val() === ""){
@@ -69,7 +73,7 @@ $(function() {
           //   },
             {
               'email': 'skye@weareva.com.au',
-              'name': 'Sajen Team',
+              'name': 'Parachute Team',
               'type': 'to'
             }
           ],
