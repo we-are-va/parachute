@@ -30,6 +30,27 @@ $(function() {
     interval: 6000, pause: false, ride: true
   });
 
+  //Scrollmagic
+  // var controller = new ScrollMagic.Controller({
+  //   globalSceneOptions: {
+  //     triggerHook: 'onLeave'              
+  //   }
+  // });
+
+  // var slides = ['#layout-canyon', '#layout-canyon2', '#layout-canyon3', '#footer']; 
+
+  // new ScrollMagic.Scene({ triggerElement: '#layout-content', duration: 500 })
+  //   .setPin('#layout-content')
+  //   .addTo(controller);
+
+  // // create scene for every slide
+  // for (var i=0; i<slides.length; i++) {
+  //   $(slides[i]).addClass('layout-fs');
+  //   new ScrollMagic.Scene({ triggerElement: slides[i] })
+  //     .setPin(slides[i])
+  //     .addTo(controller);
+  // }
+
   $(".form-group input, .form-group textarea").focusout(function(){
       if($(this).val() === ""){
         $(this).parent().removeClass('focus');
