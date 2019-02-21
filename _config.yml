@@ -13,7 +13,6 @@ exclude:
   - config
   - Gemfile
   - Gemfile.lock
-  - Gruntfile.js
   - gulpfile.js
   - log
   - node_modules
@@ -24,10 +23,6 @@ exclude:
   - tmp
   - assets
   - manifest.json
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
 
 permalink: pretty
 title: 'Parachute'
@@ -46,5 +41,3 @@ collections:
 #   style: compressed # possible values: nested expanded compact compressed
 
 # google_analytics_id: null
-
-MANDRILL_APIKEY: 99
