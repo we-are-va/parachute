@@ -1,7 +1,7 @@
 baseurl: ''
 markdown : kramdown
 exclude: 
-  - ['README.md']
+  - 'README.md'
   - .asset-cache
   - .bundle
   - assets/manifest.json
