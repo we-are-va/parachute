@@ -12,17 +12,17 @@
     "content": "Consult with our expert team and start your unique strategy."
   },
   {
-    "title": "Talk to you",
-    "content": "We’ll talk to you, your stakeholders and even staff about possible solutions and what the future looks like."
-  },
-  {
     "title": "Consultation",
-    "content": "Consult with our expert team and start your unique strategy."
+    "content": "We’ll talk to you, your stakeholders and even staff about possible solutions and what the future looks like."
   },
   {
     "title": "Turn It Around or Land Safe",
     "content": "With honesty and integrity, we’ll aim to turn your business around or if we have to, we’ll create a soft landing."
-  }
+  },
+  {
+    "title": "[TITLE]",
+    "content": "...."
+  },
 ]
 
 

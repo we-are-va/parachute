@@ -35,7 +35,7 @@ $(function() {
   sr.reveal('section h2, .reveal, section header');
   // Reveal in a ripple efffect
   sr.reveal('.howwehelp-action', { duration: 800 }, 100);
-  sr.reveal('#whyparachute p, #wearewithyou p, #ourpromise p', { duration: 500 }, 50);
+  sr.reveal('#contact .contact li, #whyparachute p, #wearewithyou p, #ourpromise p', { duration: 500 }, 50);
   
   //Scrollmagic
   if($(window).width() > 1024) {
