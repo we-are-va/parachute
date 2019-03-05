@@ -87,18 +87,12 @@ $(function() {
       type: 'POST',
       url: 'https://mandrillapp.com/api/1.0/messages/send.json',
       data: {
-        //'key': 'qQ2_bQU2BL_ad3Sdvy7RgA', // SAJEN MANDRILL API KEY
-        'key': 'QcXJRxVWxBu7qctC1bgv9g', // VA MANDRILL API KEY
+        'key': 'qQ2_bQU2BL_ad3Sdvy7RgA', // SAJEN MANDRILL API KEY
         'message': {
           'from_email': 'web@parachute.com.au',
           'to': [
-          // {
-          //     'email': 'info@parachute.com.au' 
-          //     'name': 'Parachute Team',
-          //     'type': 'to'
-          //   },
             {
-              'email': 'skye@weareva.com.au',
+              'email': 'help@parachute.com.au',
               'name': 'Parachute Team',
               'type': 'to'
             }
@@ -108,17 +102,6 @@ $(function() {
           'html': html,
           'track_opens': true,
           'track_clicks': true
-          // optional merge variables. must also be setup on the list management side of mandrill
-          /* 'merge_vars': [{
-            'rcpt': $('.email').val(),
-            'vars': [{
-              'name': 'FRIEND',
-              "content": 'Skye'
-            }, {
-              'name': 'YEARS',
-              'content': '27'
-            }]
-          }], */
         }
       }
     }).fail(function(response) {
