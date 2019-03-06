@@ -274,6 +274,12 @@ textarea {
   }
 }
 
+#thankyou {
+  @include media-breakpoint-up(md) {
+    min-height: 350px;
+  }
+}
+
 #thankyou, #form-error {
   display: none;
 }
