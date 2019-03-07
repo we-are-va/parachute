@@ -89,11 +89,16 @@ $(function() {
       data: {
         'key': 'qQ2_bQU2BL_ad3Sdvy7RgA', // SAJEN MANDRILL API KEY
         'message': {
-          'from_email': 'web@parachute.com.au',
+          'from_email': 'webform@parachute.com.au',
           'to': [
             {
               'email': 'help@parachute.com.au',
               'name': 'Parachute Team',
+              'type': 'to'
+            },
+            {
+              'email': 'skye@weareva.com.au',
+              'name': 'VA',
               'type': 'to'
             }
           ],
