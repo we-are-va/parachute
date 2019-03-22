@@ -81,7 +81,7 @@ $(function() {
     fields+="</ul>";
 
     var html = "<p>Hello!</p><p>You have received a new Parachute website enquiry.</p>" +
-    fields + "<p>&nbsp;</p><p>&nbsp;</p><hr><p><em><small>This is an automated message from https://www.parachute.com.au</small></em></p>";
+    fields + "<p>&nbsp;</p><p>&nbsp;</p><hr><p><em><small>This is an automated message from https://www.parachute.net.au</small></em></p>";
 
     $.ajax({
       type: 'POST',
@@ -89,18 +89,18 @@ $(function() {
       data: {
         'key': 'qQ2_bQU2BL_ad3Sdvy7RgA', // SAJEN MANDRILL API KEY
         'message': {
-          'from_email': 'webform@parachute.com.au',
+          'from_email': 'webform@parachute.net.au',
           'to': [
             {
-              'email': 'help@parachute.com.au',
+              'email': 'help@parachute.net.au',
               'name': 'Parachute Team',
               'type': 'to'
-            },
-            {
-              'email': 'skye@weareva.com.au',
-              'name': 'VA',
-              'type': 'to'
             }
+            // ,{
+            //   'email': 'skye@weareva.com.au',
+            //   'name': 'VA',
+            //   'type': 'to'
+            // }
           ],
           'autotext': 'true',
           'subject': 'Web enquiry from ' + $("#contact-name").val(),
@@ -110,7 +110,7 @@ $(function() {
         }
       }
     }).fail(function(response) {
-      $("#form-error").html("Sorry, there was an error sending your enquiry. Please try again soon or email help@parachute.com.au directly.").show().delay(5000).fadeOut(300);
+      $("#form-error").html("Sorry, there was an error sending your enquiry. Please try again soon or email help@parachute.net.au directly.").show().delay(5000).fadeOut(300);
     }).done(function(response) {
       console.log("Enquiry sent!");
       var thanks_html = $("#thankyou").html().replace("[NAME]", $("#contact-name").val()); 
