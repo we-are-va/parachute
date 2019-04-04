@@ -1,6 +1,6 @@
 ---
 name: Patricia and John Talbot - Your Place Espresso & Bar
-title: Your Place Espresso & Bar
+title: yourplace.md
 
 ---
 It has been a privilege and a pleasure for us to have known Michael Datta since 2017. 
