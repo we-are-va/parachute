@@ -1,9 +1,13 @@
 ---
-name: Mysterious Business Owner 'X'
-title: ''
+name: Patricia and John Talbot - Your Place Espresso & Bar
+title: Your Place Espresso & Bar
 published: false
 
 ---
-I didn’t know what to do... I couldn’t tell my wife, my family... even my best friend.
+It has been a privilege and a pleasure for us to have known Michael Datta since 2017. 
 
-I was so alone. Reaching out to the Parachute team changed everything. I felt secure with the worse case scenarios and even got excited again about why I got into business… things turned around and it would never have happened without outside help...
+My son and I were introduced to him while running a Bar and Bistro Venue on the Sunshine Coast. 
+
+On request, Michael immediately became a business adviser, motivator and mentor. He was actively involved in helping with the daily running of the business, the management of staff and the introduction of IT advertising. He had unique ideas and was supportive in all areas.
+
+We both appreciated his skills and motivation. He is The Best Mentor.
