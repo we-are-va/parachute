@@ -1,5 +1,5 @@
 ---
-name: Mysterious Business Owner 'X'
+name: Name withheld
 
 ---
 I didn’t know what to do... I couldn’t tell my wife, my family... even my best friend.
