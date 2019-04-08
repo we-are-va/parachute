@@ -1,8 +1,8 @@
 $(function() {
   
-  var $hero_footer = $('.layout-hero .hero-footer');
-  var $navbar      = $("#header");
-  var $form = $("#contact-form");
+  var $hero_footer  = $('.layout-hero .hero-footer');
+  var $form         = $("#contact-form");
+  var $navbarLayout = $("#navbarLayout");
 
   function load_resize() {
     $navbar = $("#header"); 
@@ -17,13 +17,25 @@ $(function() {
       $('.layout-image').css('height', ($(window).width()/2.5));
     }    
   
-
   }
 
   load_resize();
   $(window).resize(function() { 
     load_resize(); 
   }); // onresize
+
+
+  // Mobile menu
+  $navbarLayout.on('hidden.bs.collapse', function () {
+    $("#toggle-main-menu").removeClass('is-active');
+  });
+  $navbarLayout.on('shown.bs.collapse', function () {
+    $("#toggle-main-menu").addClass('is-active');
+  });
+
+  $navbarLayout.find('a').on('click tap press', function () {
+    $navbarLayout.collapse('hide');
+  });
 
   // Carousel
   $('#hero-carousel').carousel({
