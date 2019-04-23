@@ -9,7 +9,16 @@ $(function() {
     $('body').css('padding-top', $navbar.outerHeight());
 
     if($(window).width() >= 768) {
+      //console.log("window height: " + $(window).height());
+      //console.log("navbar outerheight: " + $navbar.outerHeight());
+      //console.log("hero footer outerheight: " + $hero_footer.outerHeight());
       var hero_content_height = $(window).height() - $navbar.outerHeight() - $hero_footer.outerHeight();
+      //console.log("hero content height: " + hero_content_height);
+     
+      if(hero_content_height < 500) {
+        hero_content_height = 500;
+      }
+
       $('#hero-content, #hero-carousel').css('height', hero_content_height);
     }
 
@@ -49,7 +58,7 @@ $(function() {
   sr.reveal('.howwehelp-action', { duration: 800 }, 100);
   sr.reveal('#contact .contact li, #whyparachute p, #wearewithyou p, #ourpromise p', { duration: 500 }, 50);
   
-  //Scrollmagic
+  // Scrollmagic
   if($(window).width() > 1024) {
     var controller = new ScrollMagic.Controller({
       globalSceneOptions: {

@@ -7,12 +7,19 @@
       <li class="address mt-1">{{ site.data.contact.street }}<br>{{ site.data.contact.suburb }}</li>
     {% endif %}
   </ul>
+  <ul class="mt-0 mb-h social list-unstyled list-inline">
+    {% for platform in site.data.social %}
+      <li class="list-inline-item">
+        <a href="{{ platform.url }}" target="blank"><img class="svg" src="{{site.baseurl}}/dist/images/{{ platform.name }}.svg"><span class="sr-only">{{ platform.name }}</span></a>
+      </li>
+    {% endfor %}         
+    </ul>
 </div>
 
-<ul class="mt-2 mt-lg-5 mb-h social list-unstyled list-inline">
+<!-- <ul class="mt-2 mt-lg-5 mb-h social list-unstyled list-inline">
   {% for platform in site.data.social %}
     <li class="list-inline-item">
       <a href="{{ platform.url }}" target="blank"><img class="svg" src="{{site.baseurl}}/dist/images/{{ platform.name }}.svg"><span class="sr-only">{{ platform.name }}</span></a>
     </li>
   {% endfor %}         
-</ul>
+</ul> -->

@@ -1,8 +1,8 @@
-- name: facebook
-  url: facebook.com
-- name: twitter
-  url: twitter.com
+# - name: facebook
+#   url: facebook.com
+# - name: twitter
+#   url: twitter.com
 - name: linkedin
-  url: twitter.com
-- name: instagram
-  url: twitter.com
+  url: https://www.linkedin.com/showcase/parachute-soft-landings-for-hard-times/
+# - name: instagram
+#   url: twitter.com
