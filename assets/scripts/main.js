@@ -103,9 +103,11 @@ $(function() {
     }
     //recaptcha passed validation
     else {
-      $('#recaptcha-error').hide();
+      console.log("Recaptcha accepted");
       //return true;
     }
+
+    return false;
 
 
     var fields = '<ul>'; var br = '';
