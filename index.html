@@ -11,6 +11,8 @@
   <!-- Bootstrap 4 -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   <link href="/dist/styles/main.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target="#main-menu" class='page page-home'>
@@ -360,7 +362,12 @@
             <div class="form-group form-group-textarea position-relative">
               <label class="" for="contact-message">Message</label>
               <textarea id="message" name="Message" class="form-control" required></textarea>
+            </div> 
+
+            <div class="form-group form-group-textarea position-relative">
+               <div class="g-recaptcha" data-sitekey="6Lc7UaAUAAAAAA8EJ6i6y6zouADZpVprE9nHdWqN"></div>
             </div>
+
             <div class="form-actions text-right position-relative">
               <button class="btn btn-primary" id="contact-submit" type="submit">Send</button>
             </div>
@@ -386,6 +393,7 @@
   </div>
 </section>
   <!-- JS -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
