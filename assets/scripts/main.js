@@ -86,6 +86,8 @@ $(function() {
     $(this).parent().addClass('focus');
   });
 
+  console.log("testing");
+
   $form.submit(function( event ) {
     console.log( "Handler for .submit() called." );
     event.preventDefault();
