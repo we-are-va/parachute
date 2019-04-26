@@ -92,6 +92,22 @@ $(function() {
 
     var datastring = $(this).serializeArray();
 
+    var recaptcha_response = grecaptcha.getResponse();
+
+    console.log(recaptcha_response);
+
+    //recaptcha failed validation
+    if (recaptcha_response.length == 0) {
+      $("#form-error").html("Please tick the recaptcha box.").show().delay(5000).fadeOut(300);
+      return false;
+    }
+    //recaptcha passed validation
+    else {
+      $('#recaptcha-error').hide();
+      //return true;
+    }
+
+
     var fields = '<ul>'; var br = '';
 
     $.each(datastring, function( i, fld ) {
