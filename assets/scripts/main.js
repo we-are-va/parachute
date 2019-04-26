@@ -86,7 +86,7 @@ $(function() {
     $(this).parent().addClass('focus');
   });
 
-  console.log("testing!!");
+  console.log("Welcome to Parachute.");
 
   $form.submit(function( event ) {
     console.log( "Handler for .submit() called." );
@@ -96,7 +96,7 @@ $(function() {
 
     var recaptcha_response = grecaptcha.getResponse();
 
-    console.log(recaptcha_response);
+    //console.log(recaptcha_response);
 
     //recaptcha failed validation
     if (recaptcha_response.length == 0) {
@@ -106,11 +106,7 @@ $(function() {
     //recaptcha passed validation
     else {
       console.log("Recaptcha accepted");
-      //return true;
     }
-
-    return false;
-
 
     var fields = '<ul>'; var br = '';
 
